@@ -9,7 +9,7 @@ import Menu from './menu'
 
 
 
-export default function Envio() {
+export default function Canal({ navigation }) {
   return (
       
 <View style={styles.container}> 
@@ -22,8 +22,6 @@ export default function Envio() {
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-   
-
     }
  
 })

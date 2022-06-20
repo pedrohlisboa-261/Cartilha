@@ -10,20 +10,21 @@ import Buton from '../../components/Buton'
 const statusBarHeight = StatusBar.currentHeight ? StatusBar.currentHeight + 22 : 64;
 
 
-export default function Header(){
+export default function Header(props){
+    
     return(
         <View style={styles.container}>
         
         <Text style={styles.titulo}>Selecione o canal que dejesa receber:</Text>
-
+            
             <View style={styles.content}>
-            <Buton title="E-mail"/>
-            <Buton title="WhatsApp"/>
+            <Buton title="E-mail" navigate={props.navigate} proximo="Envio"/>
+            <Buton title="WhatsApp" navigate={props.navigate} proximo="Envio"/>
             </View>
             
             <View style={styles.content}>
-            <Buton title="Sms"/>
-            <Buton title="Reclamação"/>
+            <Buton title="Sms" navigate={props.navigate} proximo="Envio"/>
+            <Buton title="Reclamação" navigate={props.navigate} proximo="Envio"/>
             </View>
         </View>
         
@@ -37,7 +38,7 @@ const styles = StyleSheet.create({
         paddingStart: 16,
         paddingEnd: 16,
         paddingBottom:44,
-        height: 500,
+        height: "60%",
         marginTop:0,
         borderTopStartRadius: 44,
         borderTopEndRadius: 44,
@@ -56,8 +57,8 @@ const styles = StyleSheet.create({
         flex: 1,
         flexDirection:'row',
         justifyContent: 'space-between',
-        paddingStart: 25,
-        paddingEnd: 25
+        paddingStart: "10%",
+        paddingEnd: "10%"
     },
 
 })

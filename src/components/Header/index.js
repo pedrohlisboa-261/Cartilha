@@ -36,11 +36,10 @@ const styles = StyleSheet.create({
     container: {
         backgroundColor: 'rgba(255,255,255,0.9)',
         paddingTop: statusBarHeight,
-
         paddingStart: 16,
         paddingEnd: 16,
         paddingBottom: 44,
-        height: 300,
+        height: "40%",
         marginTop: 0
 
 
@@ -51,11 +50,11 @@ const styles = StyleSheet.create({
 
     },
     logo: {
-        width: 200,
-        height: 50,
+        width: 250,
+        height: 70,
     },
     title: {
-        padding: 25,
+        padding: "10%",
         fontSize: 22,
         color: '#bbbaba',
         fontWeight: 'bold',
@@ -64,6 +63,6 @@ const styles = StyleSheet.create({
     },
     progress: {
         flex: 1,
-        top: 90
+        top: "30%"
     }
 })

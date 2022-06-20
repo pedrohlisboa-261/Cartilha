@@ -1,25 +1,22 @@
-import Cartilha from './src/pages/Cartilha'
-import Canal from './src/pages/Canal'
-import Envio from './src/pages/Envio'
-import { 
-  StyleSheet, 
-  Text, 
+import Routes from './routes';
+
+import {
+  StyleSheet,
+  Text,
   View,
   ImageBackground
 } from 'react-native';
 
 export default function App() {
-  
   return (
+
+    <ImageBackground
+      source={require('./assets/image.png')}
+      style={styles.imageBackground}> 
+      <Routes />
+    </ImageBackground>
     
-    <ImageBackground 
-    source={require('./assets/image.png')} 
-    style={styles.imageBackground}>  
-      {/* <Cartilha/> */}
-       {/* <Canal/> */}
-       <Envio/>
-  </ImageBackground> 
-  
+
   );
 }
 
@@ -28,7 +25,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: "column"
-  
+
   },
   imageBackground: {
     flex: 1,

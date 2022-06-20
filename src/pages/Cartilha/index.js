@@ -9,12 +9,12 @@ import Menu from './menu'
 
 
 
-export default function Cartilha() {
+export default function Cartilha({ navigation }) {
   return (
       
 <View style={styles.container}> 
     <Header positionProgress="0"/>   
-    <Menu/>
+    <Menu navigate={navigation.navigate}/>
 </View>
   );
 }

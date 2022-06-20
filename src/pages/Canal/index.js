@@ -9,12 +9,14 @@ import Menu from './menu'
 
 
 
-export default function Canal() {
+
+export default function Canal({navigation}) {
+
   return (
       
 <View style={styles.container}> 
     <Header positionProgress="1"/>   
-    <Menu/>
+    <Menu navigate={navigation.navigate}/>
 </View>
   );
 }

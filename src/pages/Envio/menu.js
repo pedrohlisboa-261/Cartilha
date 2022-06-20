@@ -4,9 +4,9 @@ import {
     Text,
     StyleSheet,
     StatusBar,
+    Button,
     TextInput
 } from 'react-native';
-import Buton from '../../components/Buton'
 
 const statusBarHeight = StatusBar.currentHeight ? StatusBar.currentHeight + 22 : 64;
 
@@ -20,20 +20,35 @@ export default function Header() {
             <View style={styles.content}>
                 <View style={styles.inputView}>
                     <TextInput style={styles.TextInput}
-                    placeholder="Email" 
-                    placeholderTextColor="#003f5c"   
+                        placeholder="Email"
+                        placeholderTextColor="#003f5c"
                     />
-                 </View>
+                </View>
                 <View style={styles.inputView}>
                     <TextInput style={styles.TextInput}
-                    secureTextEntry={true}
-                    placeholder="Email"
-                    placeholderTextColor="#003f5c"
+                        secureTextEntry={true}
+                        placeholder="Email"
+                        placeholderTextColor="#003f5c"
                     />
                 </View>
 
+               
             </View>
+
+            <View style={styles.contentBnt}>
+                <Button style={styles.btn}
+                    onPress={() => {
+                        console.log("teste")
+                    }}
+
+                    title="Enviar"
+                    color="#64bd53"
+                    accessibilityLabel="Enviar"
+                />
+            </View>
+
         </View>
+
 
     )
 }
@@ -45,12 +60,10 @@ const styles = StyleSheet.create({
         paddingStart: 16,
         paddingEnd: 16,
         paddingBottom: 44,
-        height: 500,
+        height: "60%",
         marginTop: 0,
         borderTopStartRadius: 44,
         borderTopEndRadius: 44,
-
-
     },
     titulo: {
         textAlign: 'center',
@@ -62,11 +75,10 @@ const styles = StyleSheet.create({
     },
     content: {
         flex: 1,
-        top: 90,       
+        top: 90,
         paddingStart: 25,
         paddingEnd: 25,
         alignItems: 'center',
-        
     },
     inputView: {
         backgroundColor: "#fff",
@@ -75,12 +87,17 @@ const styles = StyleSheet.create({
         height: 45,
         marginBottom: 20,
         alignItems: "center",
-      },
-      
-      TextInput: {
+    },
+    TextInput: {
         height: 50,
         flex: 1,
-        
+    },
+    btn: {
+        width: "100%",
+        height: "100%",
+    },
+    contentBnt: {
+        width: 100,
+        height: 100,
     }
-
 })

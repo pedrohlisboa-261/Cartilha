@@ -28,7 +28,7 @@ const customStyles = {
     stepIndicatorFinishedColor: '#64bd53',
     stepIndicatorUnFinishedColor: '#ffffff',
     stepIndicatorCurrentColor: '#ffffff',
-    stepIndicatorLabelFontSize: 13,
+    stepIndicatorLabelFontSize: 17,
     currentStepIndicatorLabelFontSize: 13,
     stepIndicatorLabelCurrentColor: '#64bd53',
     stepIndicatorLabelFinishedColor: '#ffffff',
